@@ -1,0 +1,19 @@
+@media screen and (max-width: 550px) {
+
+	html body.home article{
+		width: 50%;
+		height: 40%;
+	}
+	
+	html body.single article,
+	html body.single #comments,
+	html body.single #sidebar-bottom{
+		width: 76%;
+		margin: 1% 12%;
+	}
+	
+	html body aside.masonry{
+		width: 45%;
+	}
+
+}

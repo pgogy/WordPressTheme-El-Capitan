@@ -1,0 +1,470 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 24px;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+a{
+	text-decoration: none;
+}
+
+.home article,
+.category article,
+.tag article,
+.search article,
+.author article{
+	float:left;
+	position:relative;
+}
+
+#lightbox{
+	z-index:10000;
+	position:fixed;
+	margin:5%;
+	width:90%;
+	height:80%;
+	display:none;
+	background-color: rgba(0,0,0, 0.8);
+	padding:1%;
+}
+
+#lightbox #holder{
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height:98%;
+	width:98%;
+}
+
+#lightbox #close{
+	position:absolute;
+	top:0px;
+	right:10px;
+}
+
+.album_name{
+	z-index:100;
+	position:absolute;
+	top:40%;
+	text-align:center;
+	width:100%;
+	background-color: rgba(0,0,0, 0.8);
+	color:#fff;
+	display:none;
+}
+
+.four{
+	width:50%;
+	height:50%;
+}
+
+.six{
+	width:50%;
+	height:33.3%;
+}
+
+.eight{
+	width:25%;
+	height:50%;
+}
+
+.nine{
+	width:33.3%;
+	height:33.3%;
+}
+
+.ten{
+	width:20%;
+	height:50%;
+}
+
+.twenty{
+	width:20%;
+	height:25%;
+}
+
+.twentyfive{
+	width:20%;
+	height:20%;
+}
+
+.admin-bar .fourteen_picture_1,
+.admin-bar .fourteen_picture_2{
+	width:50%;
+	height:60%;
+} 
+
+.fourteen_picture_1,
+.fourteen_picture_2{
+	width:50%;
+	height:60%;
+}
+
+.fourteen_picture_3,
+.fourteen_picture_4,
+.fourteen_picture_5,
+.fourteen_picture_6{
+	width:25%;
+	height:30%;
+}
+
+.fourteen_picture_7,
+.fourteen_picture_8,
+.fourteen_picture_9,
+.fourteen_picture_10,
+.fourteen_picture_11,
+.fourteen_picture_12,
+.fourteen_picture_13,
+.fourteen_picture_14{
+	width:12.5%;
+	height:10%;
+}
+
+.single article{
+	width: 86%;
+	margin: 1% 5%;
+	padding: 2%;
+}
+
+#comments,
+#sidebar-bottom{
+	width:90%;
+	margin:1% 5%;
+	padding:0px;
+}
+
+.picmenu{
+	top: 20%;
+	left: 3px;
+}
+
+.fourteen_picture_7 .picmenu,
+.fourteen_picture_8 .picmenu,
+.fourteen_picture_9 .picmenu,
+.fourteen_picture_10 .picmenu,
+.fourteen_picture_11 .picmenu,
+.fourteen_picture_12 .picmenu,
+.fourteen_picture_13 .picmenu,
+.fourteen_picture_14 .picmenu{
+	top: 0px;
+}
+
+.picmenu div{
+	height: 20px;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+
+.picmenu div a,
+.picmenu div i{
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#homeshow{
+	z-index:1000;
+	position: fixed;
+	top: 33px;
+	right: 3px;
+}
+
+#paginationshow{
+	z-index:1000;
+	position: fixed;
+	top: 90px;
+	right: 3px;
+}
+
+#searchshow{
+	z-index:1000;
+	position: fixed;
+	top: 60px;
+	right: 3px;
+}
+
+#paginationholder{
+	position: fixed;
+	top: 100px;
+	right: 0px;
+	display: none;
+	background-color: rgba(0,0,0, 0.8);
+	color:#fff;
+	padding:1%;
+}
+
+#searchholder{
+	z-index:10000;
+	text-align:center;
+	position: fixed;
+	top: 100px;
+	right: 0px;
+	display: none;
+	background-color: rgba(0,0,0, 0.8);
+	color:#fff;
+	padding:1%;
+}
+
+#searchholder form{
+	margin:0px;
+	padding:0px;
+}
+
+#paginationholder h1{
+	font-size:25px;
+}
+
+.picmenu{
+	position: absolute;
+	margin: 0px;
+	text-align: center;
+	font-size:13px;
+}
+
+.album_div div.picinfo{
+	left: 0px;
+}
+
+.album_div div.piclightbox{
+	left: 25px;
+}
+
+.album_div div.picview{
+	left: 45px;
+}
+
+html, body, #page, #primary, #main, #content{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	font-family:"Biryani", sans-serif;
+}
+
+h1{
+	font-size: 50px;
+	padding: 10px 0px;
+ }
+ 
+ h2{
+	font-size: 40px;
+	padding: 10px 0px;
+ }
+ 
+ h3{
+	font-size: 30px;
+	padding: 10px 0px;
+ }
+ 
+ h4{
+	font-size: 25px;
+	padding: 10px 0px;
+ }
+ 
+ h5{
+	font-size: 20px;
+	padding: 10px 0px;
+ }
+ 
+ h6{
+	font-size: 15px;
+	padding: 10px 0px;
+ }
+ 
+ blockquote{
+	font-style: italic;
+	font-size: entry40px;
+	text-align: center;
+	padding: 10px 0px;
+	line-height: 40px;
+ }
+ 
+ dt{
+	font-weight: bold;
+ }
+ 
+ dd{
+	padding-left: 10px;
+ }	
+ 
+ .page-links{
+	padding: 10px 0px;
+ }
+ 
+ .page-links span{
+	padding-right: 10px;
+ }
+ 
+ .comment-list li{
+	padding-left: 30px;
+ }	
+ 
+ .comment-list li.depth-1{
+	padding-left: 0px;
+ }
+ 
+  .entry-content img{
+	max-width:100%;
+	height: auto;
+ }
+
+.archive footer{
+	width: 100%;
+	clear: both;
+	position: relative;
+}
+
+
+ h1{
+	font-size: 50px;
+	padding: 10px 0px;
+ }
+ 
+ h2{
+	font-size: 40px;
+	padding: 10px 0px;
+ }
+ 
+ h3{
+	font-size: 30px;
+	padding: 10px 0px;
+ }
+ 
+ h4{
+	font-size: 25px;
+	padding: 10px 0px;
+ }
+ 
+ h5{
+	font-size: 20px;
+	padding: 10px 0px;
+ }
+ 
+ h6{
+	font-size: 15px;
+	padding: 10px 0px;
+ }
+ 
+ blockquote{
+	font-style: italic;
+	font-size: 40px;
+	text-align: center;
+	padding: 10px 0px;
+	line-height: 40px;
+ }
+ 
+ dt{
+	font-weight: bold;
+ }
+ 
+ dd{
+	padding-left: 10px;
+ }	
+ 
+ .page-links{
+	padding: 10px 0px;
+ }
+ 
+ .page-links span{
+	padding-right: 10px;
+ }
+ 
+ .comment-list li{
+	padding-left: 30px;
+ }	
+ 
+ .comment-list li.depth-1{
+	padding-left: 0px;
+ }
+ 
+  .entry-content img{
+	max-width:100%;
+	height: auto;
+ }
+ 
+ pre{
+	width: 100%;
+	overflow-wrap: break-word;
+ }
+
+.sticky{
+
+}
+
+ul,ol,dl{
+	margin-left: 30px;
+}
+
+.comment-list li{
+	list-style: none;
+}
+
+.single header{
+	text-align: center;
+}
+
+.widget-title{
+	font-size:20px;
+}
+
+aside.masonry{
+	border-top: 5px solid black;
+	width: 24%;
+	font-size: 15px;
+	margin-right: 1%;
+	margin-top: 10px;
+	padding-top: 20px;
+}
+
+.entry-footer h6,
+.entry-footer span,
+.entry-footer div{
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 15px;
+}
+
+#comments h3,
+#comments p{
+	font-size: 15px;
+}
+
+#comment{
+	display:block;
+	width:100%;
+}
+
+#commentform input[type=text],
+#commentform input[type=url],
+#commentform input[type=email]{
+	width:100%;
+	padding:2% 0%;
+	clear:both;
+	display:block;
+}
+
+.album_div{
+	width:100%; height:100%; float:left; position:relative;
+	background-size: cover; background-position: center center; background-repeat:no-repeat;
+}
+
+button,
+input[type=submit]{
+	padding: 10px;
+	margin-top: 10px;
+}
