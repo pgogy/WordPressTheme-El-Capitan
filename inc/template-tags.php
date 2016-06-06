@@ -91,7 +91,7 @@ function el_capitan__entry_meta() {
 	
 }
 
-function el_capitan__post_background() {
+function el_capitan_post_background() {
 	$background = rand(1,6);
 	switch($background){
 		case 1: return "cubes";

@@ -20,7 +20,7 @@
 			?>>&nbsp;
 			</div><?PHP
 		}else{
-			?><div class="<?PHP echo el-capitan_post_background(); ?>">&nbsp;</div><?PHP
+			?><div class="<?PHP echo el_capitan_post_background(); ?>">&nbsp;</div><?PHP
 		}?>
 	<div class="album_name">
 		<a href="<?PHP echo get_permalink(); ?>" rel="bookmark">
