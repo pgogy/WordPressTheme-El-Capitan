@@ -12,13 +12,7 @@
 
 	endwhile;
 	
-	?>
-	<div id="paginationshow"><a><i class="fa fa-book" aria-hidden="true"></i></a></div>
-	<div id="paginationholder">
-		<?PHP
-			get_template_part( 'parts/pagination/pagination');
-		?>
-	</div><?PHP
+	get_template_part( 'parts/pagination/pagination_html' );
 	
 else :
 

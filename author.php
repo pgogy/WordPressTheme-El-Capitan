@@ -10,11 +10,6 @@ get_header();
 		?></main><!-- .site-main -->
 	</div><!-- .content-area -->
 	
-	<div id="paginationshow"><a><i class="fa fa-book" aria-hidden="true"></i></a></div>
-	<div id="paginationholder">
-		<?PHP
-			get_template_part( 'parts/pagination/pagination');
-		?>
-	</div>
+	get_template_part( 'parts/pagination/pagination_html' );
 
 <?php get_footer(); ?>

@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>">
-	<header class="entry-header" style="<?php el-capitan_post_colour_background(); ?>">
+	<header class="entry-header">
 		<?php
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -26,8 +26,8 @@
 		?>
 	</div><!-- .entry-content -->
 	
-	<footer class="entry-footer" style="<?php el-capitan_post_colour_background(); ?>">
-		<?php el-capitan_entry_meta(); ?>
+	<footer class="entry-footer">
+		<?php el_capitan_entry_meta(); ?>
 		<?php edit_post_link( __( 'Edit', 'el-capitan' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

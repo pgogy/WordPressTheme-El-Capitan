@@ -1,6 +1,6 @@
 <?PHP
 
-//	if(get_theme_mod("pagination")=="on"){
+	if(get_theme_mod("pagination")=="on"){
 
 		$links = paginate_links( array( "prev_text" => _x("Previous", "Before this one", "el-capitan"), "next_text" => _x("Next", "After this one", "el-capitan") ));
 		
@@ -17,4 +17,4 @@
 			
 		}
 		
-//	}
+	}

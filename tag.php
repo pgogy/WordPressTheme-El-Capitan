@@ -9,19 +9,7 @@ get_header();
 	
 		?></main><!-- .site-main -->
 	</div><!-- .content-area -->
-	
-	<div id="paginationshow"><a><i class="fa fa-book" aria-hidden="true"></i></a></div>
-	<div id="paginationholder">
-		<?PHP
-			get_template_part( 'parts/pagination/pagination');
-		?>
-	</div>
-	
-	<div id="searchshow"><a><i class="fa fa-search" aria-hidden="true"></i></a></div>
-	<div id="searchholder">
-		<?PHP
-			get_template_part( 'parts/search-form/standard');
-		?>
-	</div>
-
+	<?PHP
+	get_template_part( 'parts/pagination/pagination_html' );
+	?>
 <?php get_footer(); ?>

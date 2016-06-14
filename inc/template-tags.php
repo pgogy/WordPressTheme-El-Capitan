@@ -1,6 +1,6 @@
 <?php
 
-function el_capitan__get_categories($id){
+function el_capitan_get_categories($id){
 
 	$post_categories = wp_get_post_categories($id);
 	$cats = array();
@@ -14,10 +14,10 @@ function el_capitan__get_categories($id){
 
 }
 
-function el_capitan__get_categories_links($id){
+function el_capitan_get_categories_links($id){
 
 	$html = array();
-	$cats = el_capitan__get_categories($id);
+	$cats = el_capitan_get_categories($id);
 	
 	foreach($cats as $cat){
 		$html[] = "<a href='" . $cat['link'] ."'>" . $cat['name'] . "</a>";
@@ -32,7 +32,7 @@ function el_capitan__get_categories_links($id){
 
 }
 
-function el_capitan__body_class(){
+function el_capitan_body_class(){
 
 	if(is_author()){
 		return "author";
@@ -40,7 +40,7 @@ function el_capitan__body_class(){
 	
 }
 
-function el_capitan__get_tags($id){
+function el_capitan_get_tags($id){
 
 	$post_tags = wp_get_post_tags($id);
 	$cats = array();
@@ -54,10 +54,10 @@ function el_capitan__get_tags($id){
 
 }
 
-function el_capitan__get_tags_links($id){
+function el_capitan_get_tags_links($id){
 
 	$html = array();
-	$cats = el_capitan__get_tags($id);
+	$cats = el_capitan_get_tags($id);
 	
 	foreach($cats as $cat){
 		$html[] = "<a href='" . $cat['link'] ."'>" . $cat['name'] . "</a>";
@@ -71,10 +71,10 @@ function el_capitan__get_tags_links($id){
 
 }
 
-function el_capitan__entry_meta() {
+function el_capitan_entry_meta() {
 	
 	?><div>
-		<h6 class='meta_label'><?PHP echo _x('Categories', 'Categories', 'el-capitan'); ?></h6><span><?PHP echo implode(" / ", el_capitan__get_categories_links(get_the_ID())); ?></span>
+		<h6 class='meta_label'><?PHP echo _x('Categories', 'Categories', 'el-capitan'); ?></h6><span><?PHP echo implode(" / ", el_capitan_get_categories_links(get_the_ID())); ?></span>
 	</div>
 	<div>
 		<h6 class='meta_label'><?PHP echo _x('Tags', 'Tags', 'el-capitan'); ?></h6><span><?PHP echo get_the_tag_list(" ", " / ", " "); ?></span>
@@ -103,11 +103,11 @@ function el_capitan_post_background() {
 	}
 }
 
-function el_capitan__category_title_background($term) {
+function el_capitan_category_title_background($term) {
 
-	$hex = el_capitan__hex2rgb(get_theme_mod("site_post_background_colour"));
+	$hex = el_capitan_hex2rgb(get_theme_mod("site_post_background_colour"));
 
-	$thumbnail = get_option( 'el_capitan__picture_' . $term . '_thumbnail_id', 0 );
+	$thumbnail = get_option( 'el_capitan_picture_' . $term . '_thumbnail_id', 0 );
 	
 	if($thumbnail){
 		
@@ -115,7 +115,7 @@ function el_capitan__category_title_background($term) {
 	
 	}else{
 
-		$colour = get_option( 'el_capitan__' . $term . '_colour');
+		$colour = get_option( 'el_capitan_' . $term . '_colour');
 		
 		if($colour){
 			
@@ -127,15 +127,15 @@ function el_capitan__category_title_background($term) {
 
 }
 
-function el_capitan__post_colour_background() {
+function el_capitan_post_colour_background() {
 
 	global $post;
-	$colour = get_post_meta($post->ID, "el_capitan__post_colour", true);
+	$colour = get_post_meta($post->ID, "el_capitan_post_colour", true);
 	?> background-color:<?PHP echo $colour;?>; <?PHP
 	
 }
 
-function el_capitan__post_thumbnail() {
+function el_capitan_post_thumbnail() {
 
 	if(get_post_thumbnail_id(get_the_ID())!=""){
 		
@@ -147,7 +147,7 @@ function el_capitan__post_thumbnail() {
 	
 }
 
-function el_capitan__child_categories(){
+function el_capitan_child_categories(){
 
 	?><footer class="page-footer">
 		<h1 class="page-title"><?PHP echo _x('Related Categories', "Similar Categories", 'el-capitan'); ?></h1>
@@ -171,7 +171,7 @@ function el_capitan__child_categories(){
 
 }
 
-function el_capitan__posts_authors_list($type, $id){
+function el_capitan_posts_authors_list($type, $id){
 
 	$the_query = new WP_Query( array($type => $id, 'posts_per_page' => 99) );
 	
@@ -190,9 +190,9 @@ function el_capitan__posts_authors_list($type, $id){
 	
 }
 
-function el_capitan__posts_authors_html($type, $id){
+function el_capitan_posts_authors_html($type, $id){
 
-	$authors = array_unique(el_capitan__posts_authors_list($type, $id));
+	$authors = array_unique(el_capitan_posts_authors_list($type, $id));
 
 	$output = array();
 	foreach($authors as $author){
@@ -203,18 +203,18 @@ function el_capitan__posts_authors_html($type, $id){
 
 }
 
-function el_capitan__post_authors($type, $id){
+function el_capitan_post_authors($type, $id){
 	?><footer class="page-footer">
 		<h1 class="page-title"><?PHP echo _x('Authors', "WordPress authors", 'el-capitan'); ?></h1>
 		<div class="taxonomy-description" id='tag_cloud'><?PHP
 		
-			el_capitan__posts_authors_html($type, $id);
+			el_capitan_posts_authors_html($type, $id);
 			
 		?></div>
 	</footer><?PHP
 }
 
-function el_capitan__posts_content($type, $id){
+function el_capitan_posts_content($type, $id){
 
 	$the_query = new WP_Query( array($type => $id, 'posts_per_page' => 99) );
 	
