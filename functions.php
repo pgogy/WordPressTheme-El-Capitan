@@ -83,7 +83,6 @@ function el_capitan_filter_head() {
 }
 add_action('get_header', 'el_capitan_filter_head');
  
- 
 function el_capitan_alter_query($query) {
 
 	global $wp_query;
