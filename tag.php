@@ -10,6 +10,6 @@ get_header();
 		?></main><!-- .site-main -->
 	</div><!-- .content-area -->
 	<?PHP
-	get_template_part( 'parts/pagination/pagination_html' );
+		get_template_part( 'parts/pagination/pagination_html' );
 	?>
 <?php get_footer(); ?>

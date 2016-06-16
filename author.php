@@ -9,7 +9,7 @@ get_header();
 	
 		?></main><!-- .site-main -->
 	</div><!-- .content-area -->
-	
-	get_template_part( 'parts/pagination/pagination_html' );
-
+	<?PHP
+		get_template_part( 'parts/pagination/pagination_html' );
+	?>
 <?php get_footer(); ?>
