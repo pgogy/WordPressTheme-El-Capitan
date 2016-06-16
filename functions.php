@@ -65,9 +65,6 @@ function el_capitan_scripts() {
 	wp_enqueue_script( 'el_capitan-pagination', get_template_directory_uri() . '/js/paginationshow.js', array( 'jquery' ) );
 	wp_enqueue_script( 'el_capitan-searchshow', get_template_directory_uri() . '/js/searchshow.js', array( 'jquery' ) );
 	wp_enqueue_script( 'el_capitan-widget-masonry', get_template_directory_uri() . '/js/widgetmasonry.js', array( 'jquery' ) );
-	wp_enqueue_script( 'el_capitan-table-fix', get_template_directory_uri() . '/js/display/table_fix.js', array( 'jquery' ) );
-	wp_enqueue_script( 'el_capitan-comments', get_template_directory_uri() . '/js/show_comments/show_comments.js', array( 'jquery' ) );
-	wp_enqueue_script( 'el_capitan-search-form', get_template_directory_uri() . '/js/search/search-form.js', array( 'jquery' ) );
 	wp_enqueue_script( 'jquery-effects-core', array( 'jQuery' ) );
 	wp_enqueue_script( 'masonry', array( 'jQuery' ) );
 	wp_enqueue_script( 'jquery-effects-slide', array( 'jQuery-effects-core' ) );
