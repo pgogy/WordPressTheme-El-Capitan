@@ -468,3 +468,15 @@ input[type=submit]{
 	padding: 10px;
 	margin-top: 10px;
 }
+
+.single article footer{
+	clear:both;
+}	
+
+.search-field{
+	width:100%;
+}
+
+.search-form{
+	text-align:center;
+}
