@@ -176,6 +176,10 @@ function el_capitan_extra_style(){
 		.single #main a{
 			color: <?PHP echo get_theme_mod('site_post_link_colour'); ?>;
 		}
+
+		.single #main{
+			color: <?PHP echo get_theme_mod('site_post_text_colour'); ?>;
+		}
 				
 		button,
 		input[type=submit]{
@@ -287,6 +291,7 @@ function el_capitan_init(){
 		set_theme_mod('search','on');
 		set_theme_mod('author','on');
 		set_theme_mod('comments','on');
+		set_theme_mod('page-navigation','on');
 		set_theme_mod('home_page','fourteen');
 
 		add_option("el_capitan_setup_theme", 1);

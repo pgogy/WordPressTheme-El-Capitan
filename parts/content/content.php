@@ -25,7 +25,25 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-	
+	<?PHP
+		if(get_theme_mod("page-navigation")=="on"){
+	?>
+	<div class="page-navigation">
+		<?PHP 
+			$prev = get_previous_post_link();
+			if($prev!=""){
+				echo __("Previous", "el-capitan") . " " . $prev;	
+			}
+		 ?>
+		<?PHP 
+			$next = get_next_post_link();
+			if($next!=""){
+				echo __("Next", "el-capitan") . " " . $next; 
+			} 
+		?>
+	</div><?PHP
+		}
+	?>
 	<footer class="entry-footer">
 		<?php el_capitan_entry_meta(); ?>
 		<?php edit_post_link( __( 'Edit', 'el-capitan' ), '<span class="edit-link">', '</span>' ); ?>

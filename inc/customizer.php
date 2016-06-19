@@ -141,6 +141,27 @@ function el_capitan_customize_register_page_layout( $wp_customize ){
 			),
 		)
 	);
+
+	$wp_customize->add_setting(
+		'page-navigation',
+		array(
+			'default' => 'on',
+			'sanitize_callback' => 'el_capitan_sanitize_text'
+		)
+	);
+	 
+	$wp_customize->add_control(
+		'page-navigation',
+		array(
+			'type' => 'radio',
+			'label' => 'Display page navigation',
+			'section' => 'page_layout',
+			'choices' => array(
+				'on' => 'On',
+				'off' => 'Off'		
+			),
+		)
+	);
 	
 }
 
