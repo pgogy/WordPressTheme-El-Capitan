@@ -6,8 +6,12 @@ jQuery(document).ready( function(){
 				jQuery(value)
 					.on("click", function() {
 					
-						if(jQuery( "#searchholder" ).is(":visible")){
-							jQuery( "#searchholder" ).fadeOut(500);
+						if(jQuery( "#orderholder" ).is(":visible")){
+							jQuery( "#orderholder" ).fadeOut(500);
+						}
+						
+						if(jQuery( "#paginationholder" ).is(":visible")){
+							jQuery( "#paginationholder" ).fadeOut(500);
 						}
 					
 						if(!jQuery( "#searchholder" ).is(":visible")){
@@ -22,5 +26,3 @@ jQuery(document).ready( function(){
 			}
 		)		
 });
-
-console.log("loaded");

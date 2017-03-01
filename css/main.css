@@ -208,6 +208,27 @@ a{
 	padding:1%;
 }
 
+
+#ordershow{
+	z-index:1000;
+	position: fixed;
+	top: 35px;
+	right: 10px;
+	text-align:center;
+}
+
+#orderholder{
+	position: fixed;
+	top: 100px;
+	right: 0px;
+	display: none;
+	background-color: rgba(0,0,0, 0.8);
+	color:#fff;
+	padding:1%;
+	z-index:10000000000000000000;
+}
+
+
 #searchholder{
 	z-index:10000;
 	text-align:center;

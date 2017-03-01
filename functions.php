@@ -64,6 +64,13 @@ function el_capitan_scripts() {
 	wp_enqueue_script( 'el_capitan-info', get_template_directory_uri() . '/js/moreinfo.js', array( 'jquery' ) );
 	wp_enqueue_script( 'el_capitan-pagination', get_template_directory_uri() . '/js/paginationshow.js', array( 'jquery' ) );
 	wp_enqueue_script( 'el_capitan-searchshow', get_template_directory_uri() . '/js/searchshow.js', array( 'jquery' ) );
+	wp_enqueue_script( 'el_capitan-ordershow', get_template_directory_uri() . '/js/ordershow.js', array( 'jquery' ) );
+	wp_localize_script( 'el_capitan-ordershow', 'el_capitan_ordershow', 
+																			array( 
+																					'nonce' => wp_create_nonce("el_capitan_order"),
+																					'ajaxURL' => admin_url("admin-ajax.php")
+																				)
+					);
 	wp_enqueue_script( 'el_capitan-widget-masonry', get_template_directory_uri() . '/js/widgetmasonry.js', array( 'jquery' ) );
 	wp_enqueue_script( 'jquery-effects-core', array( 'jQuery' ) );
 	wp_enqueue_script( 'masonry', array( 'jQuery' ) );
@@ -276,6 +283,8 @@ add_action("wp_head", "el_capitan_extra_style");
 
 function el_capitan_init(){
 
+	session_start();
+
 	if(!get_option("el_capitan_setup_theme")){
 	
 		set_theme_mod('site_allsite_background_colour','#000000');
@@ -301,5 +310,23 @@ function el_capitan_init(){
 }
 add_action("init", "el_capitan_init");
 
+function el_capitan_alter_query_order($query) {
+
+	if(isset($_SESSION['order'])){
+
+		global $wp_query;
+
+		$data = explode("_", $_SESSION['order']);
+
+		$query->set('orderby', array($data[0] => $data[1]));
+	
+		remove_all_actions ( '__after_loop');
+	
+	}
+	
+}
+add_action('pre_get_posts','el_capitan_alter_query_order');
+
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/reorder.php';

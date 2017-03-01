@@ -20,6 +20,17 @@
 	</div>
 	<?PHP
 		}
+		
+		if(true){
+	?>
+	<div id="ordershow"><a><i class="fa fa-arrows-v" aria-hidden="true"></i></a></div>
+	<div id="orderholder">
+		<?PHP
+			get_template_part( 'parts/pagination/order');
+		?>
+	</div>
+	<?PHP
+		}
 	?>
 	<div id="page" class="hfeed site">
 		<div id="content" class="site-content">
